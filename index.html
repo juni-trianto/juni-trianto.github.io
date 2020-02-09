@@ -1,24 +1,5 @@
 
 
-<?php 
-
-	if(isset($_POST['submit']))
-	{
-		$nisob = 4000000;
-		if($_POST['name'] >= $nisob )
-		{
-			$penghasilan = $_POST['name'];
-			$hitung		= $penghasilan * 2.5/100;
-			
-			echo '<p> Dengan Penghasilan Anda </p></h1>Rp ' . number_format($penghasilan) . '</h1><p>Maka anda berhak zakat sebesar</p></h2> Rp ' .number_format( $hitung ).'</h2>';
-			
-		}else{
-			
-			echo "<script>alert('Anda Belum Wajib Zakat!')</script>";
-		}
-	}else{
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -61,5 +42,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
-
-<?php } ?>
