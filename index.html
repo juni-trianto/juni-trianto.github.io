@@ -1,7 +1,65 @@
-<center>
 
-<h2>Hello World , i'm Juni trianto</h2>
-<p>Programmer | Web Developer | Designer</p>
- 
 
-</center>
+<?php 
+
+	if(isset($_POST['submit']))
+	{
+		$nisob = 4000000;
+		if($_POST['name'] >= $nisob )
+		{
+			$penghasilan = $_POST['name'];
+			$hitung		= $penghasilan * 2.5/100;
+			
+			echo '<p> Dengan Penghasilan Anda </p></h1>Rp ' . number_format($penghasilan) . '</h1><p>Maka anda berhak zakat sebesar</p></h2> Rp ' .number_format( $hitung ).'</h2>';
+			
+		}else{
+			
+			echo "<script>alert('Anda Belum Wajib Zakat!')</script>";
+		}
+	}else{
+?>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <center> <h1>Hello I'm Juni Trianto</h1> </center>
+	<center> Programmer | Web developer | Designer </center>
+			<div class="row">
+			<div class="col-md-2"> </div>
+			<div class="col-md-8">
+			<div class="card-body"> 
+				<form method="post" action="">
+				  <div class="row">
+						<div class="form-group col-12">
+						  <label for="inputEmail4">Penghasilan</label>
+						  <input type="text" name="name" class="form-control" id="inputEmail4">
+						</div>
+						<div class="form-group col-12">
+					  <input type="submit" name="submit" class="btn btn-primary" value="Hitung">
+					  </div>
+				  </div>
+				</form>
+			</div>
+			</div>
+			<div class="col-md-2"> </div>
+			</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<?php } ?>
