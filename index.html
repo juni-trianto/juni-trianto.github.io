@@ -1,62 +1,56 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
-button:hover, a:hover {
-  opacity: 0.7;
-}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
+
 <body>
+    <section class="section">
+        <div class="box">
+            <div class="columns">
+                <div class="column">
+                    <div class="notification is-success">
+                        hello sekolah koding
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="notification is-success">
+                        hello sekolah koding
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="notification is-success">
+                        hello sekolah koding
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="notification is-success">
+                        hello sekolah koding
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h2 style="text-align:center">User Profile Card</h2>
 
-<div class="card">
-  <img src="https://pbs.twimg.com/profile_images/1125028361288409088/_vFsppMB_400x400.jpg" alt="John" style="width:100%">
-  <h1>Juni Trianto</h1>
-  <p class="title">CEO & Founder <br> creativepiata.com</p>
-  <p>Politeknik TMKM</p>
-  <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
-  </div>
-  <p><button>Contact</button></p>
-</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        var settings = {
+            "url": "https://api.kawalcorona.com/indonesia/",
+            "method": "GET",
+            "timeout": 0,
+        };
+
+        $.ajax(settings).done(function(response) {
+            console.log(response);
+        });
+    </script>
+
 
 </body>
+
 </html>
