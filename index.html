@@ -7,17 +7,7 @@
     <title>Hello Bulma!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 
-    <script>
-        var requestOptions = {
-            method: 'GET',
-            redirect: 'follow'
-        };
-
-        fetch("https://api.kawalcorona.com/indonesia/", requestOptions)
-            .then(response => response.text())
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
-    </script>
+  
 </head>
 
 <body>
@@ -49,6 +39,19 @@
     </section>
 
 
+    <button type="button" onclick="loadDoc()">Request data</button>
+    <p id="demo"></p>
+
+    <script>
+    function loadDoc() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+        document.getElementById("demo").innerHTML = this.responseText;
+      }
+      xhttp.open("GET", "https://api.kawalcorona.com/indonesia/");
+      xhttp.send();
+    }
+    </script>
 
 
 </body>
